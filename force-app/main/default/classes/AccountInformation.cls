@@ -5,7 +5,6 @@ public with sharing class AccountInformation {
     @AuraEnabled(cacheable=true)
     public static list<Account> getAccounts(String searchkey){
         try {
-             searchkey='%'+searchkey+'%';
           system.debug('account  : '+searchkey);
             return [select Id,Name from Account where Name like : searchkey];
         } catch (Exception e) {
