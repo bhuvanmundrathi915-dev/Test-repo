@@ -3,8 +3,7 @@ public class AccountList {
     @auraEnabled(cacheable=true)
     public static Map<Object,Object> getAccounts()
     {
-      Map<Id,Account> mp=  new Map<Id,Account>([select Id,Name from Account limit 10]);
-              
+      Map<Id,Account> mp=  new Map<Id,Account>([select Id,Name from Account limit 10]);      
         return new Map<Object,Object>{'account'=>mp,'contact'=>new Map<String,String>{'contact1'=>'ramesh','contact2'=>'sathish','contact3'=>'jay'}};
     }
     @auraEnabled(cacheable=true)
