@@ -6,6 +6,7 @@ public with sharing class AccountInformation {
     public static list<Account> getAccounts(String searchkey){
         try {
              searchkey='%'+searchkey+'%';
+          system.debug('account  : '+searchkey);
             return [select Id,Name from Account where Name like : searchkey];
         } catch (Exception e) {
             throw new AuraHandledException(e.getMessage());
