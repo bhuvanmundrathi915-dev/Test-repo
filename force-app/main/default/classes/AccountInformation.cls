@@ -1,6 +1,6 @@
 public with sharing class AccountInformation {
     public AccountInformation() {
-
+      //all
     }
     @AuraEnabled(cacheable=true)
     public static list<Account> getAccounts(String searchkey){
