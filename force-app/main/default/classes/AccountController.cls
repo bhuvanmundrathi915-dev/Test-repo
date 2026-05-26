@@ -1,4 +1,5 @@
 public with sharing class AccountController {
+// to make changes on Accounts  
 @AuraEnabled(cacheable=true)
     public static List<Account> getAllActiveAccounts() {
      // HYDERBABAD
