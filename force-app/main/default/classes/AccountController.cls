@@ -5,4 +5,8 @@ public with sharing class AccountController {
      // my name is bhuvan
     return [SELECT Id,Name,Active__c,(select Id,FirstName,LastName from Contacts) FROM Account WHERE CreatedDate =today];
   }
+
+  public static void updateAccount(Account acc) {
+    update acc;
+}
 }
